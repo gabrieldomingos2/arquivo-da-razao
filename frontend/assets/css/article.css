@@ -1,0 +1,138 @@
+/* Intro curta */
+.quote{
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  border-left: 2px solid var(--gold);
+  padding-left: 1.5rem;
+  margin: 0 0 1.2rem;
+}
+
+.explain{
+  color: var(--muted);
+  margin: 0 0 2.2rem;
+}
+
+.highlight{
+  font-size: 1.1rem;
+  margin: 0 0 2.2rem;
+}
+
+/* Cabeçalho editorial */
+.kicker{ text-align:center; margin: 0 0 1.5rem; }
+.kicker-title{
+  font-family:'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: var(--gold);
+  letter-spacing: .5px;
+  margin: 0;
+}
+.kicker-sub{ color: var(--muted); margin:.4rem 0 0; }
+
+/* Resumo */
+.summary{
+  border: 1px solid rgba(201,162,77,.35);
+  padding: 1.25rem;
+  color: #d7d7d7;
+  background: var(--paper);
+  margin: 0 0 2.5rem;
+}
+
+/* Artigo */
+.essay h2{
+  font-family:'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin: 0 0 1rem;
+  color: var(--text);
+}
+
+/* ✅ “ABNT web”: justificado + recuo + espaçamento consistente */
+.essay p{
+  margin: 0 0 1.1rem;
+  color: #e7e7e7;
+
+  text-align: justify;
+  text-justify: inter-word;
+
+  text-indent: 2em;          /* recuo do parágrafo */
+  hyphens: auto;             /* ajuda a justificar melhor */
+  -webkit-hyphens: auto;
+  word-break: normal;
+}
+
+/* Não recuar o lead (fica mais editorial) */
+.essay .lead{
+  font-size: 1.08rem;
+  color: #f0f0f0;
+  text-indent: 0;
+}
+
+/* Drop cap no lead */
+.essay .lead::first-letter{
+  font-family:'Playfair Display', serif;
+  float: left;
+  font-size: 3.2rem;
+  line-height: 1;
+  padding-right: .6rem;
+  color: var(--gold);
+}
+
+/* Pull quotes */
+.pull{
+  margin: 2rem 0;
+  padding: 1.2rem 1.4rem;
+  border-left: 2px solid var(--gold);
+  background: rgba(201,162,77,.06);
+  font-family:'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: #f4f4f4;
+}
+
+/* Evita recuo em blocos especiais */
+.pull{ text-indent: 0; }
+.summary p{ margin: 0; text-align: left; text-indent: 0; }
+
+.thin{
+  border: none;
+  height: 1px;
+  background: rgba(201,162,77,.35);
+  margin: 2.5rem 0 1.25rem;
+}
+
+.ref{
+  color: var(--muted);
+  font-size: .95rem;
+  text-align: left;
+  text-indent: 0;
+}
+
+/* CTA */
+.cta{
+  border: 1px solid var(--gold);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+.cta h3{
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 1rem;
+}
+
+.cta a{
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all .3s;
+}
+
+.cta a:hover{
+  border-bottom: 1px solid var(--gold);
+}
+
+/* Mobile */
+@media (max-width: 520px){
+  .quote{ font-size: 1.2rem; }
+  .essay .lead::first-letter{ font-size: 2.8rem; }
+  .essay p{ text-indent: 1.6em; }
+}
